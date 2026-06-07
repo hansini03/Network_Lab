@@ -18,8 +18,6 @@
 ---
 ## 💻 Network Setup
 Below are the network configuration details extracted from the local host system's primary active interface (**Wireless LAN adapter Wi-Fi**):
-<img width="1100" height="615" alt="Screenshot 2026-06-07 220150" src="https://github.com/user-attachments/assets/c940bcb6-703f-4ac5-b106-f470532f93c4" />
-
 
 | Property | Configuration Value |
 | :--- | :--- |
@@ -30,6 +28,8 @@ Below are the network configuration details extracted from the local host system
 | **DNS Server** | *Not Listed* |
 
 > **Note:** The host system also displays virtual network configurations for VMware environments (`VMnet1` and `VMnet8`).
+<img width="1100" height="615" alt="Screenshot 2026-06-07 220150" src="https://github.com/user-attachments/assets/9dfaee2d-3d8c-4fa7-937c-e94421738556" />
+
 ---
 ## 🌐 Basic Networking Concepts
 * **IP Address:** A unique numerical identifier assigned to a device on a network, enabling communication between devices.
@@ -39,33 +39,24 @@ Below are the network configuration details extracted from the local host system
 * **Private IP Address:** An IP address used within a local network that is not directly accessible from the internet.
 * **Public IP Address:** A globally unique IP address assigned by an ISP, used to identify a network on the internet.
 ---
-## 🗺️ Network Diagram Architecture
-```text
-   [ Local Device ] (IP: 10.144.211.176)
-          │
-          ▼  (Wi-Fi Interface Connection)
-   [ Default Gateway Router ] (IP: 10.144.211.120)
-          │
-          ▼  (ISP WAN Gateway)
-     [ INTERNET ]
+## ⚡ Network Connectivity & Diagnostics Test
+### 1. Packet Loss Test (ping)
+* **Command Executed:** `ping google.com`
+* **Result Analysis:** The ping was successful with 0% packet loss. Packets Sent = 4, Received = 4, Lost = 0.
+* **Latency:** Minimum = 63ms, Maximum = 196ms, Average = 126ms. This confirms that the internet connection is active and responsive.
+  <img width="858" height="377" alt="Screenshot 2026-06-07 220500" src="https://github.com/user-attachments/assets/7e739307-6a6f-4752-8192-383cf48b1869" />
 
-⚡ Network Connectivity & Diagnostics Test
-​1. Packet Loss Test (ping)
-​Command Executed: ping google.com
-​Result Analysis: The ping was successful with 0% packet loss. Packets Sent = 4, Received = 4, Lost = 0.
-​Latency: Minimum = 63ms, Maximum = 196ms, Average = 126ms. This confirms that the internet connection is active and responsive.
-<img width="858" height="377" alt="Screenshot 2026-06-07 220500" src="https://github.com/user-attachments/assets/1823bdf9-16b7-4d70-ae97-c59db4444de3" />
+### 2. Path Route Diagnostics (tracert)
+* **Command Error Troubleshooting:** Running traceroute google.com directly in Windows Command Prompt returned an error because traceroute is a native Linux/macOS command.
+* **Resolution:** Switched to the native Windows equivalent utility tracert google.com which executed successfully.
+* **Route Path Log:** The packet reached the final Google destination server (bom05s12-in-x0e.1e100.net) in exactly 17 hops.
+  <img width="1049" height="522" alt="Screenshot 2026-06-07 220720" src="https://github.com/user-attachments/assets/65fcf9e8-dc90-4426-af17-7b0acee0c201" />
 
-​2. Path Route Diagnostics (tracert)
-​Command Error Troubleshooting: Running traceroute google.com directly in Windows Command Prompt returned an error because traceroute is a native Linux/macOS command.
-​Resolution: Switched to the native Windows equivalent utility tracert google.com which executed successfully.
-​Route Path Log: The packet reached the final Google destination server (bom05s12-in-x0e.1e100.net) in exactly 17 hops.
-<img width="1049" height="522" alt="Screenshot 2026-06-07 220720" src="https://github.com/user-attachments/assets/3488fc7e-f223-4766-a70c-1c7eb358b619" />
-
-​❓ Question and Answers
-​Q1: Was the ping successful?
-​A: Yes, the ping was successful with 0% packet loss, which means the connection is working.  
-​Q2: How many hops were shown?
-​A: There were 17 hops shown in the tracert diagnostic log, which means the data packet passed through 17 intermediate steps/routers to reach the destination server.
-​Q3: What is the purpose of traceroute?
-​A: Traceroute is used to track how data travels from one device to another. It records and displays the path taken by packets across an IP network, helping pinpoint network bottlenecks or routing drops.
+---
+## ❓ Question and Answers
+### Q1: Was the ping successful?
+**A:** Yes, the ping was successful with 0% packet loss, which means the connection is working.  
+### Q2: How many hops were shown?
+**A:** There were 17 hops shown in the tracert diagnostic log, which means the data packet passed through 17 intermediate steps/routers to reach the destination server.
+### Q3: What is the purpose of traceroute?
+**A:** Traceroute is used to track how data travels from one device to another. It records and displays the path taken by packets across an IP network, helping pinpoint network bottlenecks or routing drops.
