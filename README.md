@@ -18,6 +18,8 @@
 ---
 ## 💻 Network Setup
 Below are the network configuration details extracted from the local host system's primary active interface (**Wireless LAN adapter Wi-Fi**):
+<img width="1100" height="615" alt="Screenshot 2026-06-07 220150" src="https://github.com/user-attachments/assets/c940bcb6-703f-4ac5-b106-f470532f93c4" />
+
 
 | Property | Configuration Value |
 | :--- | :--- |
@@ -52,10 +54,14 @@ Below are the network configuration details extracted from the local host system
 ​Command Executed: ping google.com
 ​Result Analysis: The ping was successful with 0% packet loss. Packets Sent = 4, Received = 4, Lost = 0.
 ​Latency: Minimum = 63ms, Maximum = 196ms, Average = 126ms. This confirms that the internet connection is active and responsive.
+<img width="858" height="377" alt="Screenshot 2026-06-07 220500" src="https://github.com/user-attachments/assets/1823bdf9-16b7-4d70-ae97-c59db4444de3" />
+
 ​2. Path Route Diagnostics (tracert)
 ​Command Error Troubleshooting: Running traceroute google.com directly in Windows Command Prompt returned an error because traceroute is a native Linux/macOS command.
 ​Resolution: Switched to the native Windows equivalent utility tracert google.com which executed successfully.
 ​Route Path Log: The packet reached the final Google destination server (bom05s12-in-x0e.1e100.net) in exactly 17 hops.
+<img width="1049" height="522" alt="Screenshot 2026-06-07 220720" src="https://github.com/user-attachments/assets/3488fc7e-f223-4766-a70c-1c7eb358b619" />
+
 ​❓ Question and Answers
 ​Q1: Was the ping successful?
 ​A: Yes, the ping was successful with 0% packet loss, which means the connection is working.  
