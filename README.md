@@ -2,7 +2,7 @@
 **Date:** June 5, 2026  
 **Intern:** Hansini Kulal  
 ---
-## 🎯 Task Objectives
+##  Task Objectives
 * Understand the fundamental concepts and components of computer networks.
 * Identify and examine the local network configuration of a system.
 * Learn and define essential networking terms, devices, and protocols.
@@ -10,13 +10,13 @@
 * Perform basic network troubleshooting using diagnostic commands and analyze the results.
 * Organize project documentation systematically and publish it to a GitHub repository.
 ---
-## 🛠️ Tools and Commands Used
+## Tools and Commands Used
 * **`ipconfig` / `ifconfig`** – Network interface configuration tool
 * **`ping`** – ICMP network connectivity tester
 * **`traceroute` / `tracert`** – Packet route path diagnostic utility
 * **Canva / Draw.io** – Network diagram architecture designer
 ---
-## 💻 Network Setup
+## Network Setup
 Below are the network configuration details extracted from the local host system's primary active interface (**Wireless LAN adapter Wi-Fi**):
 
 | Property | Configuration Value |
@@ -31,7 +31,7 @@ Below are the network configuration details extracted from the local host system
 <img width="1100" height="615" alt="Screenshot 2026-06-07 220150" src="https://github.com/user-attachments/assets/9dfaee2d-3d8c-4fa7-937c-e94421738556" />
 
 ---
-## 🌐 Basic Networking Concepts
+##  Basic Networking Concepts
 * **IP Address:** A unique numerical identifier assigned to a device on a network, enabling communication between devices.
 * **MAC Address:** A unique hardware address assigned to a network interface by the manufacturer for device identification.
 * **Default Gateway:** A network device, typically a router, that directs traffic from a local network to external networks.
@@ -39,7 +39,7 @@ Below are the network configuration details extracted from the local host system
 * **Private IP Address:** An IP address used within a local network that is not directly accessible from the internet.
 * **Public IP Address:** A globally unique IP address assigned by an ISP, used to identify a network on the internet.
 ---
-## ⚡ Network Connectivity & Diagnostics Test
+##  Network Connectivity & Diagnostics Test
 ### 1. Packet Loss Test (ping)
 * **Command Executed:** `ping google.com`
 * **Result Analysis:** The ping was successful with 0% packet loss. Packets Sent = 4, Received = 4, Lost = 0.
@@ -53,7 +53,7 @@ Below are the network configuration details extracted from the local host system
   <img width="1049" height="522" alt="Screenshot 2026-06-07 220720" src="https://github.com/user-attachments/assets/65fcf9e8-dc90-4426-af17-7b0acee0c201" />
 
 ---
-## ❓ Question and Answers
+##  Question and Answers
 ### Q1: Was the ping successful?
 **A:** Yes, the ping was successful with 0% packet loss, which means the connection is working.  
 ### Q2: How many hops were shown?
